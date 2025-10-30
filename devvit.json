@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "cinnarito",
+  "version": "1.0.0",
+  "description": "A delightful community-driven garden game where players collaborate to grow their Spirit Tree using keyboard-controlled characters",
+  "author": "Cinnarito Team",
+  "keywords": ["game", "community", "garden", "collaborative", "interactive"],
+  "permissions": [
+    "identity",
+    "subreddit",
+    "posts",
+    "comments",
+    "redis",
+    "http"
+  ],
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "entry": "index.html"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "media": {
+    "dir": "assets"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "🌳 Play Cinnarito Garden",
+        "description": "Create and tend your community garden together!",
+        "location": "subreddit",
+        "forUserType": "loggedIn",
+        "endpoint": "/internal/menu/post-create"
+      },
+      {
+        "label": "🎮 New Garden Post",
+        "description": "Start a new community garden",
+        "location": "subreddit", 
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      }
+    ]
+  },
+  "triggers": {
+    "onAppInstall": "/internal/on-app-install"
+  },
+  "dev": {
+    "subreddit": "cinnarito_dev"
+  }
+}

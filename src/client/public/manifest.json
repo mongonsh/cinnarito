@@ -1,0 +1,62 @@
+{
+  "name": "Cinnarito - Community Garden Game",
+  "short_name": "Cinnarito",
+  "description": "A delightful community-driven Reddit game where players collaborate to grow their Spirit Tree",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2B2340",
+  "theme_color": "#A78BFA",
+  "orientation": "portrait-primary",
+  "categories": ["games", "social", "entertainment"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/default-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/default-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/default-splash.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Cinnarito Community Garden"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Garden",
+      "short_name": "Garden",
+      "description": "View your community garden",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/assets/default-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "scope": "/",
+  "id": "cinnarito-community-game",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate"
+}
